@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+    <div class="accordion">
+      <p class="menu js-menu">Q1. りり先生の出身高校は？</p>
+      <div class="contents">A. 智弁和歌山高校</div>
+      <p class="menu js-menu">Q2. りり先生の高校時代の部活動は？</p>
+      <div class="contents">A. チアリーダー部と茶道部</div>
+      <p class="menu js-menu">Q3. りり先生が理科講師を勤めるのは？</p>
+      <div class="contents">A. スタディサプリ中学生講座</div>
+      <p class="menu js-menu">Q4. りり先生の大学は？</p>
+      <div class="contents">A. 東京医科歯科大学医学部医学科</div>
+      <p class="menu js-menu">Q5. りり先生が医科歯科大ミスコンと一緒に踊ったのは？</p>
+      <div class="contents">A. 惑星ループ</div>
+      <p class="menu js-menu">Q6. りり先生の苗字は？</p>
+      <div class="contents">A. 藤代</div>
+      <p class="menu js-menu">Q7. りり先生のセンター試験の点数は？</p>
+      <div class="contents">A. 94%</div>
+      <p class="menu js-menu">Q8. りり先生の出身は？</p>
+      <div class="contents">A. 和歌山県</div>
+    </div>
+  </section>
+
+  <script>
+    const menu = document.querySelectorAll(".js-menu");
+
+    function toggle() {
+      const content = this.nextElementSibling;
+      this.classList.toggle("is-active");
+      content.classList.toggle("is-open");
+    }
+
+    for (let i = 0; i < menu.length; i++) {
+      menu[i].addEventListener("click", toggle);
+    }
+  </script>
+
+</body>
+</html>
